@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
       () => {
 
         if (
-          window.innerWidth > 980
+          window.innerWidth > 1040
         ) {
 
           closeMobileMenu();
@@ -237,6 +237,40 @@ document.addEventListener("DOMContentLoaded", () => {
     `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
 
+  function showNotification(message) {
+    let toast = document.getElementById("ui-notification-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "ui-notification-toast";
+      toast.style.position = "fixed";
+      toast.style.bottom = "24px";
+      toast.style.left = "50%";
+      toast.style.transform = "translateX(-50%)";
+      toast.style.backgroundColor = "#53301e";
+      toast.style.color = "#fffaf4";
+      toast.style.padding = "14px 24px";
+      toast.style.borderRadius = "8px";
+      toast.style.boxShadow = "0 8px 24px rgba(0,0,0,0.25)";
+      toast.style.zIndex = "9999";
+      toast.style.fontFamily = "Montserrat, sans-serif";
+      toast.style.fontSize = "14px";
+      toast.style.textAlign = "center";
+      toast.style.maxWidth = "90vw";
+      toast.style.transition = "opacity 0.3s ease";
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.style.opacity = "1";
+    toast.style.display = "block";
+    clearTimeout(toast._timeout);
+    toast._timeout = setTimeout(() => {
+      toast.style.opacity = "0";
+      setTimeout(() => {
+        toast.style.display = "none";
+      }, 300);
+    }, 4000);
+  }
+
   whatsappButtons.forEach(
     (button) => {
 
@@ -257,8 +291,8 @@ document.addEventListener("DOMContentLoaded", () => {
             "5547999999999"
           ) {
 
-            alert(
-              "Coloque o número real do WhatsApp da clínica no arquivo js/script.js antes de publicar."
+            showNotification(
+              "Configure o número real do WhatsApp da clínica no arquivo js/script.js antes de publicar."
             );
 
             return;
@@ -266,11 +300,11 @@ document.addEventListener("DOMContentLoaded", () => {
           }
 
 
-          window.open(
-            whatsappURL,
-            "_blank",
-            "noopener,noreferrer"
-          );
+          const link = document.createElement("a");
+          link.href = whatsappURL;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.click();
 
         }
       );
@@ -439,6 +473,99 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
   );
+
+
+  /* =======================================================
+     8. ACCORDION DE DÚVIDAS (FAQ)
+  ======================================================= */
+
+  const faqItems =
+    document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const questionButton =
+      item.querySelector(".faq-question");
+
+    if (!questionButton) {
+      return;
+    }
+
+    questionButton.addEventListener("click", () => {
+      const isAlreadyActive =
+        item.classList.contains("active");
+
+      // Fecha outros itens para foco limpo
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+          const otherBtn =
+            otherItem.querySelector(".faq-question");
+          if (otherBtn) {
+            otherBtn.setAttribute("aria-expanded", "false");
+          }
+        }
+      });
+
+      if (isAlreadyActive) {
+        item.classList.remove("active");
+        questionButton.setAttribute("aria-expanded", "false");
+      } else {
+        item.classList.add("active");
+        questionButton.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+
+  /* =======================================================
+     9. ANIMAÇÕES SUAVES NO SCROLL (INTERSECTION OBSERVER)
+  ======================================================= */
+
+  const animatedSelectors = [
+    ".section-heading-copy",
+    ".treatment-card",
+    ".results-copy",
+    ".results-gallery",
+    ".structure-content-copy",
+    ".structure-main-image",
+    ".structure-mini-card",
+    ".location-copy",
+    ".location-details",
+    ".location-media",
+    ".faq-header",
+    ".faq-item",
+    ".final-cta-image",
+    ".final-cta-copy",
+  ].join(", ");
+
+  const scrollElements =
+    document.querySelectorAll(animatedSelectors);
+
+  if ("IntersectionObserver" in window) {
+    const scrollObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
+
+    scrollElements.forEach((el) => {
+      scrollObserver.observe(el);
+    });
+  } else {
+    // Fallback gracioso imediato
+    scrollElements.forEach((el) => {
+      el.classList.add("is-revealed");
+    });
+  }
 
 
 });

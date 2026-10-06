@@ -692,9 +692,9 @@ p {
 
     min(
 
-      555px,
+      640px,
 
-      48%
+      52%
 
     );
 
@@ -746,7 +746,7 @@ p {
 
 .hero-benefits {
 
-  max-width: 560px;
+  max-width: 640px;
 
   display: grid;
 
@@ -754,9 +754,9 @@ p {
 
     repeat(4, 1fr);
 
-  gap: 14px;
+  gap: 16px;
 
-  margin-top: 33px;
+  margin-top: 36px;
 
 }
 
@@ -766,15 +766,15 @@ p {
 
   align-items: center;
 
-  gap: 8px;
+  gap: 10px;
 
 }
 
 .hero-benefit-icon {
 
-  width: 35px;
+  width: 44px;
 
-  height: 35px;
+  height: 44px;
 
   display: grid;
 
@@ -788,13 +788,21 @@ p {
 
   font-size:
 
-    1.05rem;
+    1.35rem;
 
   border:
 
-    1px solid
+    1.5px solid
 
-    rgba(181, 118, 24, 0.38);
+    rgba(181, 118, 24, 0.45);
+
+  background:
+
+    rgba(255, 250, 244, 0.7);
+
+  box-shadow:
+
+    0 4px 14px rgba(181, 118, 24, 0.08);
 
   border-radius:
 
@@ -816,11 +824,15 @@ span:last-child {
 
   font-size:
 
-    0.60rem;
+    0.82rem;
 
   line-height:
 
-    1.35;
+    1.3;
+
+  white-space:
+
+    nowrap;
 
 }
 
@@ -829,6 +841,18 @@ span:last-child {
   color:
 
     var(--text);
+
+  font-size:
+
+    0.90rem;
+
+  font-weight:
+
+    600;
+
+  white-space:
+
+    nowrap;
 
 }
 
@@ -2678,10 +2702,6 @@ span:last-child {
 
   padding:
 
-    110px
-
-    0
-
     0;
 
   margin:
@@ -2770,7 +2790,7 @@ span:last-child {
 
   object-position:
 
-    center 28%;
+    center top;
 
 }
 
@@ -3388,7 +3408,7 @@ span:last-child {
 
     gap:
 
-      15px;
+      11px;
 
   }
 
@@ -3396,7 +3416,11 @@ span:last-child {
 
     font-size:
 
-      0.70rem;
+      0.68rem;
+
+    padding:
+
+      3px 4px;
 
   }
 
@@ -3404,7 +3428,7 @@ span:last-child {
 
     width:
 
-      172px;
+      152px;
 
   }
 
@@ -3412,7 +3436,11 @@ span:last-child {
 
     padding-inline:
 
-      14px;
+      12px;
+
+    font-size:
+
+      0.72rem;
 
   }
 
@@ -3434,7 +3462,11 @@ span:last-child {
 
     max-width:
 
-      390px;
+      480px;
+
+    gap:
+
+      20px 24px;
 
   }
 
@@ -3582,7 +3614,7 @@ span:last-child {
 
 ========================================================= */
 
-@media (max-width: 980px) {
+@media (max-width: 1040px) {
 
   .desktop-menu,
 
@@ -4124,7 +4156,7 @@ span:last-child {
 
     padding-top:
 
-      90px;
+      0;
 
   }
 
@@ -4368,11 +4400,15 @@ span:last-child {
 
     max-width:
 
-      420px;
+      480px;
 
     grid-template-columns:
 
       repeat(2, 1fr);
+
+    gap:
+
+      18px 20px;
 
     margin:
 
@@ -4810,21 +4846,9 @@ span:last-child {
 
   .location-address-card {
 
-    left:
+    display:
 
-      16px;
-
-    right:
-
-      16px;
-
-    bottom:
-
-      16px;
-
-    min-width:
-
-      0;
+      none;
 
   }
 
@@ -4834,7 +4858,7 @@ span:last-child {
 
     padding-top:
 
-      88px;
+      0;
 
   }
 
@@ -4850,7 +4874,15 @@ span:last-child {
 
     height:
 
-      390px;
+      410px;
+
+  }
+
+  .final-cta-image img {
+
+    object-position:
+
+      center top;
 
   }
 
@@ -5086,11 +5118,19 @@ span:last-child {
 
 @media (max-width: 430px) {
 
+  .container {
+
+    width:
+
+      min(calc(100% - 24px), var(--container));
+
+  }
+
   .hero-image-wrapper {
 
     height:
 
-      410px;
+      385px;
 
   }
 
@@ -5098,7 +5138,99 @@ span:last-child {
 
     font-size:
 
-      3.15rem;
+      clamp(2.35rem, 8.8vw, 3.15rem);
+
+    line-height:
+
+      1.08;
+
+    margin-bottom:
+
+      16px;
+
+  }
+
+  .hero-description {
+
+    font-size:
+
+      0.86rem;
+
+    line-height:
+
+      1.6;
+
+    margin-bottom:
+
+      22px;
+
+  }
+
+  .hero-benefits {
+
+    max-width:
+
+      100%;
+
+    grid-template-columns:
+
+      repeat(2, 1fr);
+
+    gap:
+
+      12px 10px;
+
+    margin-top:
+
+      24px;
+
+  }
+
+  .hero-benefit {
+
+    gap:
+
+      8px;
+
+  }
+
+  .hero-benefit-icon {
+
+    width:
+
+      38px;
+
+    height:
+
+      38px;
+
+    font-size:
+
+      1.15rem;
+
+    flex-shrink:
+
+      0;
+
+  }
+
+  .hero-benefit > span:last-child {
+
+    font-size:
+
+      0.76rem;
+
+    line-height:
+
+      1.25;
+
+  }
+
+  .hero-benefit strong {
+
+    font-size:
+
+      0.82rem;
 
   }
 
@@ -5108,7 +5240,7 @@ span:last-child {
 
     font-size:
 
-      2.7rem;
+      2.45rem;
 
   }
 
@@ -5120,7 +5252,7 @@ span:last-child {
 
     font-size:
 
-      2.85rem;
+      2.6rem;
 
   }
 
@@ -5128,7 +5260,7 @@ span:last-child {
 
     height:
 
-      315px;
+      290px;
 
   }
 
@@ -5136,7 +5268,7 @@ span:last-child {
 
     height:
 
-      285px;
+      270px;
 
   }
 
@@ -5144,11 +5276,11 @@ span:last-child {
 
     height:
 
-      395px;
+      360px;
 
     min-height:
 
-      395px;
+      360px;
 
   }
 
@@ -5156,7 +5288,7 @@ span:last-child {
 
     height:
 
-      220px;
+      200px;
 
   }
 
@@ -5166,7 +5298,11 @@ span:last-child {
 
     height:
 
-      350px;
+      310px;
+
+    border-radius:
+
+      14px;
 
   }
 
@@ -5174,7 +5310,7 @@ span:last-child {
 
     height:
 
-      345px;
+      320px;
 
   }
 
@@ -5182,7 +5318,19 @@ span:last-child {
 
     width:
 
-      205px;
+      190px;
+
+  }
+
+  .button {
+
+    min-height:
+
+      48px;
+
+    padding-inline:
+
+      18px;
 
   }
 
@@ -5199,13 +5347,799 @@ span:last-child {
 
 /* =========================================================
 
+   DÚVIDAS FREQUENTES (FAQ)
+
+========================================================= */
+
+.faq-section {
+
+  padding:
+
+    112px
+
+    0
+
+    122px;
+
+  background-color:
+
+    var(--beige-50);
+
+  position:
+
+    relative;
+
+  border-top:
+
+    1px solid
+
+    rgba(181, 118, 24, 0.12);
+
+}
+
+.faq-header {
+
+  text-align:
+
+    center;
+
+  max-width:
+
+    720px;
+
+  margin:
+
+    0
+
+    auto
+
+    54px;
+
+}
+
+.faq-header h2 {
+
+  font-family:
+
+    var(--font-title);
+
+  font-size:
+
+    clamp(2.35rem, 3.8vw, 3.45rem);
+
+  color:
+
+    var(--text);
+
+  line-height:
+
+    1.15;
+
+  margin:
+
+    14px
+
+    0
+
+    16px;
+
+  font-weight:
+
+    500;
+
+  letter-spacing:
+
+    -0.03em;
+
+}
+
+.faq-header p {
+
+  color:
+
+    var(--text-soft);
+
+  font-size:
+
+    0.98rem;
+
+  line-height:
+
+    1.7;
+
+}
+
+.faq-grid {
+
+  max-width:
+
+    840px;
+
+  margin:
+
+    0
+
+    auto;
+
+  display:
+
+    flex;
+
+  flex-direction:
+
+    column;
+
+  gap:
+
+    16px;
+
+}
+
+.faq-item {
+
+  background:
+
+    var(--cream);
+
+  border:
+
+    1px solid
+
+    rgba(181, 118, 24, 0.22);
+
+  border-radius:
+
+    14px;
+
+  overflow:
+
+    hidden;
+
+  transition:
+
+    all
+
+    0.3s
+
+    ease;
+
+  box-shadow:
+
+    0
+
+    4px
+
+    18px
+
+    rgba(50, 31, 22, 0.04);
+
+}
+
+.faq-item:hover {
+
+  border-color:
+
+    rgba(181, 118, 24, 0.45);
+
+  box-shadow:
+
+    0
+
+    8px
+
+    24px
+
+    rgba(50, 31, 22, 0.07);
+
+}
+
+.faq-item.active {
+
+  background:
+
+    #ffffff;
+
+  border-color:
+
+    var(--gold);
+
+  box-shadow:
+
+    0
+
+    8px
+
+    28px
+
+    rgba(181, 118, 24, 0.12);
+
+}
+
+.faq-question {
+
+  width:
+
+    100%;
+
+  padding:
+
+    22px
+
+    26px;
+
+  display:
+
+    flex;
+
+  justify-content:
+
+    space-between;
+
+  align-items:
+
+    center;
+
+  gap:
+
+    18px;
+
+  background:
+
+    transparent;
+
+  border:
+
+    none;
+
+  cursor:
+
+    pointer;
+
+  text-align:
+
+    left;
+
+  font-family:
+
+    var(--font-body);
+
+  color:
+
+    var(--text);
+
+  font-size:
+
+    1.02rem;
+
+  font-weight:
+
+    600;
+
+  line-height:
+
+    1.45;
+
+  transition:
+
+    color
+
+    0.25s
+
+    ease;
+
+}
+
+.faq-item.active .faq-question {
+
+  color:
+
+    var(--gold-dark);
+
+}
+
+.faq-icon {
+
+  width:
+
+    32px;
+
+  height:
+
+    32px;
+
+  display:
+
+    grid;
+
+  place-items:
+
+    center;
+
+  flex-shrink:
+
+    0;
+
+  border-radius:
+
+    50%;
+
+  border:
+
+    1.5px solid
+
+    rgba(181, 118, 24, 0.35);
+
+  color:
+
+    var(--gold);
+
+  font-size:
+
+    1.25rem;
+
+  font-weight:
+
+    300;
+
+  line-height:
+
+    1;
+
+  transition:
+
+    transform
+
+    0.3s
+
+    ease,
+
+    background
+
+    0.3s
+
+    ease,
+
+    border-color
+
+    0.3s
+
+    ease;
+
+}
+
+.faq-item.active .faq-icon {
+
+  transform:
+
+    rotate(45deg);
+
+  background:
+
+    var(--gold);
+
+  color:
+
+    #fffaf4;
+
+  border-color:
+
+    var(--gold);
+
+}
+
+.faq-answer {
+
+  display:
+
+    grid;
+
+  grid-template-rows:
+
+    0fr;
+
+  transition:
+
+    grid-template-rows
+
+    0.35s
+
+    ease;
+
+}
+
+.faq-item.active .faq-answer {
+
+  grid-template-rows:
+
+    1fr;
+
+}
+
+.faq-answer-inner {
+
+  overflow:
+
+    hidden;
+
+}
+
+.faq-answer-inner p {
+
+  padding:
+
+    0
+
+    26px
+
+    24px;
+
+  color:
+
+    var(--text-soft);
+
+  font-size:
+
+    0.93rem;
+
+  line-height:
+
+    1.75;
+
+  margin:
+
+    0;
+
+}
+
+@media (max-width: 1040px) {
+
+  .faq-section {
+
+    padding:
+
+      88px
+
+      0
+
+      96px;
+
+  }
+
+  .faq-header {
+
+    margin-bottom:
+
+      38px;
+
+  }
+
+  .faq-question {
+
+    padding:
+
+      18px
+
+      20px;
+
+    font-size:
+
+      0.95rem;
+
+    gap:
+
+      14px;
+
+  }
+
+  .faq-answer-inner p {
+
+    padding:
+
+      0
+
+      20px
+
+      20px;
+
+    font-size:
+
+      0.89rem;
+
+  }
+
+  .faq-icon {
+
+    width:
+
+      28px;
+
+    height:
+
+      28px;
+
+    font-size:
+
+      1.1rem;
+
+  }
+
+}
+
+/* =========================================================
+
+   ANIMAÇÕES SUAVES NO SCROLL
+
+========================================================= */
+
+.section-heading-copy,
+
+.treatment-card,
+
+.results-copy,
+
+.results-gallery,
+
+.structure-content-copy,
+
+.structure-main-image,
+
+.structure-mini-card,
+
+.location-copy,
+
+.location-details,
+
+.location-media,
+
+.faq-header,
+
+.faq-item,
+
+.final-cta-image,
+
+.final-cta-copy {
+
+  opacity: 0;
+
+  transform: translateY(24px);
+
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+
+  will-change: opacity, transform;
+
+}
+
+.is-revealed {
+
+  opacity: 1 !important;
+
+  transform: translateY(0) !important;
+
+}
+
+/* Staggers para tratamentos */
+
+.treatments-grid .treatment-card:nth-child(1) { transition-delay: 0.05s; }
+
+.treatments-grid .treatment-card:nth-child(2) { transition-delay: 0.12s; }
+
+.treatments-grid .treatment-card:nth-child(3) { transition-delay: 0.19s; }
+
+.treatments-grid .treatment-card:nth-child(4) { transition-delay: 0.26s; }
+
+.treatments-grid .treatment-card:nth-child(5) { transition-delay: 0.33s; }
+
+.treatments-grid .treatment-card:nth-child(6) { transition-delay: 0.40s; }
+
+/* Stagger para estrutura */
+
+.structure-mini-gallery .structure-mini-card:nth-child(1) { transition-delay: 0.08s; }
+
+.structure-mini-gallery .structure-mini-card:nth-child(2) { transition-delay: 0.18s; }
+
+.structure-mini-gallery .structure-mini-card:nth-child(3) { transition-delay: 0.28s; }
+
+/* Stagger para FAQ */
+
+.faq-grid .faq-item:nth-child(1) { transition-delay: 0.04s; }
+
+.faq-grid .faq-item:nth-child(2) { transition-delay: 0.10s; }
+
+.faq-grid .faq-item:nth-child(3) { transition-delay: 0.16s; }
+
+.faq-grid .faq-item:nth-child(4) { transition-delay: 0.22s; }
+
+.faq-grid .faq-item:nth-child(5) { transition-delay: 0.28s; }
+
+.faq-grid .faq-item:nth-child(6) { transition-delay: 0.34s; }
+
+.faq-grid .faq-item:nth-child(7) { transition-delay: 0.40s; }
+
+.faq-grid .faq-item:nth-child(8) { transition-delay: 0.46s; }
+
+/* Hover suave em cards */
+
+.treatment-card {
+
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+
+              opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+.treatment-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 16px 36px rgba(50, 31, 22, 0.12);
+
+}
+
+.treatment-card-image img {
+
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+.treatment-card:hover .treatment-card-image img {
+
+  transform: scale(1.04);
+
+}
+
+.structure-mini-card {
+
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+
+              opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+.structure-mini-card:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 14px 32px rgba(50, 31, 22, 0.10);
+
+}
+
+/* Flutuação leve e orgânica na planta/folha decorativa */
+
+@keyframes floatGentle {
+
+  0%, 100% {
+
+    transform: translateY(0) rotate(0deg);
+
+  }
+
+  50% {
+
+    transform: translateY(-9px) rotate(1.4deg);
+
+  }
+
+}
+
+.results-decoration {
+
+  animation: floatGentle 8s ease-in-out infinite;
+
+  transform-origin: center bottom;
+
+  pointer-events: none;
+
+}
+
+/* Pulso de aura dourada suave e nobre */
+
+@keyframes goldAuraPulse {
+
+  0% {
+
+    box-shadow: 0 4px 14px rgba(181, 118, 24, 0.18);
+
+  }
+
+  50% {
+
+    box-shadow: 0 8px 24px rgba(181, 118, 24, 0.32);
+
+  }
+
+  100% {
+
+    box-shadow: 0 4px 14px rgba(181, 118, 24, 0.18);
+
+  }
+
+}
+
+.button-gold {
+
+  animation: goldAuraPulse 4.5s ease-in-out infinite;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+}
+
+.button-gold:hover {
+
+  transform: translateY(-2px);
+
+  animation-play-state: paused;
+
+  box-shadow: 0 10px 28px rgba(181, 118, 24, 0.40);
+
+}
+
+.button-gold:active {
+
+  transform: scale(0.98);
+
+}
+
+/* Entrada graciosa no Hero */
+
+@keyframes heroItemEntrance {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(18px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+.hero-copy .eyebrow {
+
+  animation: heroItemEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s backwards;
+
+}
+
+.hero-copy h1 {
+
+  animation: heroItemEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.22s backwards;
+
+}
+
+.hero-copy .hero-description {
+
+  animation: heroItemEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.34s backwards;
+
+}
+
+.hero-copy .hero-benefits {
+
+  animation: heroItemEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.46s backwards;
+
+}
+
+/* =========================================================
+
    18. ACESSIBILIDADE
 
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-  \*,
+  *,
 
   *::before,
 
@@ -5215,17 +6149,49 @@ span:last-child {
 
       auto !important;
 
-    animation-duration:
+    animation:
 
-      0.01ms !important;
-
-    animation-iteration-count:
-
-      1 !important;
+      none !important;
 
     transition-duration:
 
       0.01ms !important;
+
+  }
+
+  .section-heading-copy,
+
+  .treatment-card,
+
+  .results-copy,
+
+  .results-gallery,
+
+  .structure-content-copy,
+
+  .structure-main-image,
+
+  .structure-mini-card,
+
+  .location-copy,
+
+  .location-details,
+
+  .location-media,
+
+  .faq-header,
+
+  .faq-item,
+
+  .final-cta-image,
+
+  .final-cta-copy {
+
+    opacity: 1 !important;
+
+    transform: none !important;
+
+    transition: none !important;
 
   }
 

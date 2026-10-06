@@ -1,0 +1,8 @@
+{
+  "name": "Naélen Almeida | Estética Facial e Corporal",
+  "description": "Naélen Almeida Estética Facial e Corporal em Blumenau. Tratamentos personalizados, estética avançada, tecnologia e resultados naturais.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
