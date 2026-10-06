@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -11,12 +12,22 @@
 
   <meta
     name="description"
-    content="Naélen Almeida Estética Facial e Corporal em Blumenau. Tratamentos personalizados, estética avançada e atendimento individualizado."
+    content="Naélen Almeida Estética Facial e Corporal em Blumenau. Tratamentos personalizados, estética avançada, tecnologia e resultados naturais."
   >
 
-  <title>Naélen Almeida | Estética Facial e Corporal</title>
+  <title>
+    Naélen Almeida | Estética Facial e Corporal
+  </title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- =====================================================
+       FONTES
+  ====================================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
   <link
     rel="preconnect"
@@ -29,54 +40,106 @@
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- =====================================================
+       CSS
+  ====================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
-HEADER
-===================================================== -->
+<!-- ========================================================
+     HEADER
+======================================================== -->
 
-<header class="header" id="inicio">
+<header
+  class="site-header"
+  id="inicio"
+>
 
-  <div class="container header-container">
+  <div class="container header-inner">
+
+
+    <!-- LOGO -->
 
     <a
       href="#inicio"
-      class="brand"
-      aria-label="Naélen Almeida"
+      class="header-brand"
+      aria-label="Naélen Almeida - Página inicial"
     >
+
       <img
         src="images/logo-naelen-almeida.png"
         alt="Naélen Almeida Estética Facial e Corporal"
-        class="brand-logo"
+        class="header-logo"
       >
+
     </a>
 
 
+    <!-- MENU DESKTOP -->
+
     <nav
-      class="desktop-nav"
+      class="desktop-menu"
       aria-label="Navegação principal"
     >
-      <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#tratamentos">Tratamentos</a>
-      <a href="#resultados">Resultados</a>
-      <a href="#estrutura">Estrutura</a>
-      <a href="#localizacao">Localização</a>
+
+      <a href="#inicio">
+        Início
+      </a>
+
+      <a href="#sobre">
+        Sobre
+      </a>
+
+      <a href="#tratamentos">
+        Tratamentos
+      </a>
+
+      <a href="#resultados">
+        Resultados
+      </a>
+
+      <a href="#estrutura">
+        Nossa Estrutura
+      </a>
+
+      <a href="#localizacao">
+        Localização
+      </a>
+
+      <a href="#contato">
+        Contato
+      </a>
+
     </nav>
 
 
+    <!-- WHATSAPP -->
+
     <a
-      href="#contato"
-      class="btn btn-header"
+      href="#"
+      class="button button-gold header-whatsapp js-whatsapp"
     >
+
+      <span class="button-icon">
+        ◉
+      </span>
+
       Falar no WhatsApp
+
     </a>
 
+
+    <!-- MENU MOBILE -->
 
     <button
       class="mobile-menu-button"
@@ -85,32 +148,64 @@ HEADER
       aria-expanded="false"
       data-menu-button
     >
+
       <span></span>
       <span></span>
       <span></span>
+
     </button>
 
   </div>
 
 
   <nav
-    class="mobile-nav"
-    aria-label="Menu mobile"
+    class="mobile-menu"
+    aria-label="Navegação mobile"
     data-mobile-menu
   >
-    <a href="#inicio">Início</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#tratamentos">Tratamentos</a>
-    <a href="#resultados">Resultados</a>
-    <a href="#estrutura">Estrutura</a>
-    <a href="#localizacao">Localização</a>
+
+    <a href="#inicio">
+      Início
+    </a>
+
+    <a href="#sobre">
+      Sobre
+    </a>
+
+    <a href="#tratamentos">
+      Tratamentos
+    </a>
+
+    <a href="#resultados">
+      Resultados
+    </a>
+
+    <a href="#estrutura">
+      Nossa Estrutura
+    </a>
+
+    <a href="#localizacao">
+      Localização
+    </a>
+
+    <a href="#contato">
+      Contato
+    </a>
+
 
     <a
-      href="#contato"
-      class="btn btn-primary"
+      href="#"
+      class="button button-gold js-whatsapp"
     >
+
+      <span class="button-icon">
+        ◉
+      </span>
+
       Falar no WhatsApp
+
     </a>
+
   </nav>
 
 </header>
@@ -120,17 +215,18 @@ HEADER
 <main>
 
 
-<!-- =====================================================
-HERO
-===================================================== -->
+<!-- ========================================================
+     HERO
+======================================================== -->
 
 <section class="hero">
 
-  <div class="hero-background">
+
+  <div class="hero-image-wrapper">
 
     <img
       src="images/hero-naelen-almeida.webp"
-      alt="Naélen Almeida em ambiente de estética"
+      alt="Naélen Almeida em sua clínica de estética"
       class="hero-image"
       fetchpriority="high"
     >
@@ -141,269 +237,109 @@ HERO
   <div class="hero-overlay"></div>
 
 
-  <div class="container hero-container">
+  <div class="container hero-inner">
 
-    <div class="hero-content">
+    <div class="hero-copy">
 
-      <span class="section-eyebrow">
+
+      <span class="eyebrow">
         Beleza real, resultados naturais
       </span>
 
 
       <h1>
-        Sua melhor
-        <span>versão</span>
-        em cada detalhe
+        Sua melhor versão
+        em cada fase da vida
       </h1>
 
 
-      <p>
-        Tratamentos faciais e corporais personalizados,
-        com tecnologia, segurança e um olhar
-        verdadeiramente individualizado.
+      <p class="hero-description">
+        Tratamentos faciais e corporais personalizados para
+        realçar a sua beleza natural, com segurança, ciência
+        e um olhar verdadeiramente individualizado.
       </p>
 
 
       <a
-        href="#contato"
-        class="btn btn-primary btn-large"
+        href="#"
+        class="button button-gold button-large js-whatsapp"
       >
-        Quero agendar uma avaliação
+
+        <span class="button-icon">
+          ◉
+        </span>
+
+        Agendar uma avaliação
+
       </a>
 
 
       <div class="hero-benefits">
 
-        <div class="benefit-item">
 
-          <div class="benefit-icon">
-            ♡
-          </div>
+        <div class="hero-benefit">
+
+          <span class="hero-benefit-icon">
+            ♢
+          </span>
 
           <span>
             Atendimento
-            <strong>individualizado</strong>
+            <strong>
+              humanizado
+            </strong>
           </span>
 
         </div>
 
 
-        <div class="benefit-item">
+        <div class="hero-benefit">
 
-          <div class="benefit-icon">
+          <span class="hero-benefit-icon">
             ✦
-          </div>
+          </span>
 
           <span>
             Tecnologia
-            <strong>de ponta</strong>
+            <strong>
+              de ponta
+            </strong>
           </span>
 
         </div>
 
 
-        <div class="benefit-item">
+        <div class="hero-benefit">
 
-          <div class="benefit-icon">
-            ◇
-          </div>
-
-          <span>
-            Resultados
-            <strong>naturais</strong>
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-ATALHOS DE TRATAMENTOS
-===================================================== -->
-
-<section class="treatment-shortcuts">
-
-  <div class="container treatment-shortcuts-grid">
-
-    <a href="#harmonizacao" class="shortcut-item">
-
-      <span class="shortcut-icon">
-        ◇
-      </span>
-
-      <span>
-        Harmonização
-        <strong>Facial</strong>
-      </span>
-
-    </a>
-
-
-    <a href="#preenchimento" class="shortcut-item">
-
-      <span class="shortcut-icon">
-        ♡
-      </span>
-
-      <span>
-        Preenchimento
-        <strong>Labial</strong>
-      </span>
-
-    </a>
-
-
-    <a href="#botox" class="shortcut-item">
-
-      <span class="shortcut-icon">
-        ✦
-      </span>
-
-      <span>
-        Botox
-        <strong>Preventivo</strong>
-      </span>
-
-    </a>
-
-
-    <a href="#pele" class="shortcut-item">
-
-      <span class="shortcut-icon">
-        ◇
-      </span>
-
-      <span>
-        Tratamentos
-        <strong>de Pele</strong>
-      </span>
-
-    </a>
-
-
-    <a href="#tratamentos" class="shortcut-item">
-
-      <span class="shortcut-icon">
-        ♡
-      </span>
-
-      <span>
-        Cuidados
-        <strong>Corporais</strong>
-      </span>
-
-    </a>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-SOBRE
-===================================================== -->
-
-<section
-  class="about section"
-  id="sobre"
->
-
-  <div class="container about-grid">
-
-
-    <div class="about-image">
-
-      <img
-        src="images/procedimento-facial-naelen.webp"
-        alt="Naélen Almeida realizando procedimento facial"
-        loading="lazy"
-      >
-
-    </div>
-
-
-    <div class="about-content">
-
-      <span class="section-eyebrow">
-        Sobre a clínica
-      </span>
-
-
-      <h2>
-        Mais do que procedimentos,
-        <span>
-          eu cuido de pessoas.
-        </span>
-      </h2>
-
-
-      <p>
-        Sou Naélen Almeida, biomédica e especialista
-        em estética avançada.
-      </p>
-
-
-      <p>
-        Cada atendimento é pensado de forma individual,
-        respeitando características, necessidades
-        e a história de cada paciente.
-      </p>
-
-
-      <p>
-        O objetivo é valorizar a beleza de forma
-        natural, segura e cuidadosa.
-      </p>
-
-
-      <div class="about-highlights">
-
-        <div class="highlight-card">
-
-          <span class="highlight-icon">
-            ◇
-          </span>
-
-          <strong>
-            Técnica e segurança
-          </strong>
-
-        </div>
-
-
-        <div class="highlight-card">
-
-          <span class="highlight-icon">
+          <span class="hero-benefit-icon">
             ♡
           </span>
 
-          <strong>
-            Atendimento humanizado
-          </strong>
-
-        </div>
-
-
-        <div class="highlight-card">
-
-          <span class="highlight-icon">
-            ✦
+          <span>
+            Resultados
+            <strong>
+              naturais
+            </strong>
           </span>
 
-          <strong>
-            Resultados naturais
-          </strong>
+        </div>
+
+
+        <div class="hero-benefit">
+
+          <span class="hero-benefit-icon">
+            ◇
+          </span>
+
+          <span>
+            Ambiente seguro
+            <strong>
+              e acolhedor
+            </strong>
+          </span>
 
         </div>
+
 
       </div>
 
@@ -415,324 +351,110 @@ SOBRE
 
 
 
-<!-- =====================================================
-TRATAMENTOS
-===================================================== -->
+<!-- ========================================================
+     ÂNCORA SOBRE
+======================================================== -->
+
+<div
+  id="sobre"
+  class="section-anchor"
+  aria-hidden="true"
+></div>
+
+
+
+<!-- ========================================================
+     TRATAMENTOS
+======================================================== -->
 
 <section
-  class="treatments section"
+  class="treatments-section"
   id="tratamentos"
 >
 
   <div class="container">
 
 
-    <div class="section-heading section-heading-center">
+    <div class="treatments-heading">
 
-      <span class="section-eyebrow">
-        Tratamentos mais procurados
-      </span>
+      <div class="section-heading-copy">
 
+        <span class="eyebrow">
+          Tratamentos em destaque
+        </span>
 
-      <h2>
-        Beleza, saúde e bem-estar
-        para cada fase da sua vida
-      </h2>
 
+        <h2>
+          Cuidado completo para
+          a sua beleza e bem-estar
+        </h2>
 
-      <p>
-        Tratamentos personalizados com foco
-        em cuidado, equilíbrio e naturalidade.
-      </p>
 
-    </div>
+        <p>
+          Procedimentos faciais e corporais com tecnologia avançada,
+          sempre respeitando a sua individualidade e os seus objetivos.
+        </p>
 
-
-    <div class="treatments-grid">
-
-
-      <article
-        class="treatment-card"
-        id="botox"
-      >
-
-        <div class="treatment-image">
-
-          <img
-            src="images/tratamento-botox.webp"
-            alt="Botox preventivo"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="treatment-content">
-
-          <h3>
-            Botox Preventivo
-          </h3>
-
-          <p>
-            Suavização das linhas de expressão
-            preservando a naturalidade facial.
-          </p>
-
-          <a
-            href="#contato"
-            class="treatment-link"
-          >
-            Saiba mais
-            <span>→</span>
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article
-        class="treatment-card"
-        id="preenchimento"
-      >
-
-        <div class="treatment-image">
-
-          <img
-            src="images/tratamento-preenchimento-labial.webp"
-            alt="Preenchimento labial"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="treatment-content">
-
-          <h3>
-            Preenchimento Labial
-          </h3>
-
-          <p>
-            Definição e equilíbrio respeitando
-            as características naturais.
-          </p>
-
-          <a
-            href="#contato"
-            class="treatment-link"
-          >
-            Saiba mais
-            <span>→</span>
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article
-        class="treatment-card"
-        id="harmonizacao"
-      >
-
-        <div class="treatment-image">
-
-          <img
-            src="images/tratamento-harmonizacao-facial.webp"
-            alt="Harmonização facial"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="treatment-content">
-
-          <h3>
-            Harmonização Facial
-          </h3>
-
-          <p>
-            Planejamento facial para proporcionar
-            mais equilíbrio e naturalidade.
-          </p>
-
-          <a
-            href="#contato"
-            class="treatment-link"
-          >
-            Saiba mais
-            <span>→</span>
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <article
-        class="treatment-card"
-        id="pele"
-      >
-
-        <div class="treatment-image">
-
-          <img
-            src="images/tratamento-pele.webp"
-            alt="Tratamentos de pele"
-            loading="lazy"
-          >
-
-        </div>
-
-
-        <div class="treatment-content">
-
-          <h3>
-            Tratamentos de Pele
-          </h3>
-
-          <p>
-            Cuidados para melhorar aparência,
-            textura e qualidade da pele.
-          </p>
-
-          <a
-            href="#contato"
-            class="treatment-link"
-          >
-            Saiba mais
-            <span>→</span>
-          </a>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-PROCEDIMENTO REAL
-===================================================== -->
-
-<section class="procedure-feature section">
-
-  <div class="container procedure-feature-grid">
-
-
-    <div class="procedure-feature-content">
-
-      <span class="section-eyebrow">
-        Atendimento individualizado
-      </span>
-
-
-      <h2>
-        Cuidado em cada detalhe
-      </h2>
-
-
-      <p>
-        Cada procedimento é realizado com atenção,
-        planejamento e acompanhamento individualizado.
-      </p>
-
-    </div>
-
-
-    <div class="procedure-feature-image">
-
-      <img
-        src="images/procedimento-botox-naelen.webp"
-        alt="Naélen Almeida realizando procedimento estético"
-        loading="lazy"
-      >
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-RESULTADOS
-===================================================== -->
-
-<section
-  class="results section"
-  id="resultados"
->
-
-  <div class="container results-layout">
-
-
-    <div class="results-intro">
-
-      <span class="section-eyebrow">
-        Resultados reais
-      </span>
-
-
-      <h2>
-        Beleza que apenas revela
-        o que já é seu
-      </h2>
-
-
-      <p>
-        Cada resultado é individual.
-        Os tratamentos são planejados respeitando
-        as características de cada paciente.
-      </p>
+      </div>
 
 
       <a
         href="#contato"
-        class="btn btn-primary"
+        class="section-text-link"
       >
-        Quero saber mais
+
+        Ver todos os tratamentos
+
+        <span>
+          →
+        </span>
+
       </a>
 
     </div>
 
 
-    <div class="results-gallery">
+
+    <div class="treatments-grid">
 
 
-      <article class="result-card">
+      <!-- HARMONIZAÇÃO -->
 
-        <div class="result-image">
+      <article class="treatment-card">
+
+        <div class="treatment-card-image">
 
           <img
-            src="images/resultado-botox-antes-depois.webp"
-            alt="Antes e depois de Botox"
+            src="images/tratamento-harmonizacao-facial.png"
+            alt="Naélen Almeida realizando tratamento facial"
             loading="lazy"
           >
 
         </div>
 
 
-        <div class="result-info">
+        <div class="treatment-card-body">
 
-          <h3>
-            Botox Preventivo
-          </h3>
+          <div>
 
-          <p>
-            Resultado natural.
-          </p>
+            <h3>
+              Harmonização Facial
+            </h3>
+
+            <p>
+              Equilíbrio e naturalidade para o seu rosto.
+            </p>
+
+          </div>
+
+
+          <a
+            href="#contato"
+            class="card-arrow"
+            aria-label="Saiba mais sobre harmonização facial"
+          >
+            →
+          </a>
 
         </div>
 
@@ -740,9 +462,259 @@ RESULTADOS
 
 
 
+      <!-- PREENCHIMENTO -->
+
+      <article class="treatment-card">
+
+        <div class="treatment-card-image">
+
+          <img
+            src="images/tratamento-preenchimento-labial.webp"
+            alt="Tratamento de preenchimento labial"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="treatment-card-body">
+
+          <div>
+
+            <h3>
+              Preenchimento Labial
+            </h3>
+
+            <p>
+              Mais definição, hidratação e autoestima.
+            </p>
+
+          </div>
+
+
+          <a
+            href="#contato"
+            class="card-arrow"
+            aria-label="Saiba mais sobre preenchimento labial"
+          >
+            →
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- BOTOX -->
+
+      <article class="treatment-card">
+
+        <div class="treatment-card-image">
+
+          <img
+            src="images/tratamento-botox-agulha.png"
+            alt="Aplicação de toxina botulínica"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="treatment-card-body">
+
+          <div>
+
+            <h3>
+              Toxina Botulínica (Botox)
+            </h3>
+
+            <p>
+              Prevenção e suavização das linhas de expressão.
+            </p>
+
+          </div>
+
+
+          <a
+            href="#contato"
+            class="card-arrow"
+            aria-label="Saiba mais sobre toxina botulínica"
+          >
+            →
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PELE -->
+
+      <article class="treatment-card">
+
+        <div class="treatment-card-image">
+
+          <img
+            src="images/tratamento-pele-ultrassom.png"
+            alt="Tratamento de pele realizado por Naélen Almeida"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="treatment-card-body">
+
+          <div>
+
+            <h3>
+              Tratamentos de Pele
+            </h3>
+
+            <p>
+              Tecnologia para uma pele mais saudável e luminosa.
+            </p>
+
+          </div>
+
+
+          <a
+            href="#contato"
+            class="card-arrow"
+            aria-label="Saiba mais sobre tratamentos de pele"
+          >
+            →
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================================
+     RESULTADOS
+     NOVA ESTRUTURA
+======================================================== -->
+
+<section
+  class="results-section"
+  id="resultados"
+>
+
+
+  <!--
+       ESPAÇO PARA A FUTURA PLANTA DECORATIVA.
+
+       Não precisa ter imagem agora.
+
+       Depois vamos criar uma imagem e usar no CSS
+       como fundo deste elemento.
+  -->
+
+  <div
+    class="results-decoration"
+    aria-hidden="true"
+  ></div>
+
+
+  <div class="container results-layout">
+
+
+    <!-- ==================================================
+         TEXTO
+    =================================================== -->
+
+    <div class="results-copy">
+
+
+      <span class="eyebrow">
+        Resultados reais
+      </span>
+
+
+      <h2>
+        Beleza natural
+        que transforma
+      </h2>
+
+
+      <p>
+        Cada resultado é único, assim como cada história.
+        Veja alguns antes e depois de pacientes que confiaram
+        no meu trabalho.
+      </p>
+
+
+      <a
+        href="#contato"
+        class="button button-gold"
+      >
+
+        Ver mais resultados
+
+        <span>
+          →
+        </span>
+
+      </a>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         GALERIA DE RESULTADOS
+    =================================================== -->
+
+    <div class="results-gallery">
+
+
+      <!-- RESULTADO 1 -->
+
       <article class="result-card">
 
-        <div class="result-image">
+
+        <div class="result-image-wrapper">
+
+          <img
+            src="images/resultado-botox-antes-depois.webp"
+            alt="Antes e depois de toxina botulínica"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="result-card-info">
+
+          <span class="result-caption">
+            Toxina Botulínica (Botox)
+          </span>
+
+        </div>
+
+
+      </article>
+
+
+
+      <!-- RESULTADO 2 -->
+
+      <article class="result-card">
+
+
+        <div class="result-image-wrapper">
 
           <img
             src="images/resultado-labios-antes-depois.webp"
@@ -753,19 +725,17 @@ RESULTADOS
         </div>
 
 
-        <div class="result-info">
+        <div class="result-card-info">
 
-          <h3>
+          <span class="result-caption">
             Preenchimento Labial
-          </h3>
-
-          <p>
-            Equilíbrio e definição.
-          </p>
+          </span>
 
         </div>
 
+
       </article>
+
 
     </div>
 
@@ -775,237 +745,326 @@ RESULTADOS
 
 
 
-<!-- =====================================================
-ESTRUTURA
-===================================================== -->
+<!-- ========================================================
+     NOSSA ESTRUTURA
+======================================================== -->
 
 <section
-  class="clinic"
+  class="structure-section"
   id="estrutura"
 >
 
-  <div class="clinic-grid">
+  <div class="structure-main-grid">
 
 
-    <div class="clinic-image">
+    <!-- FOTO PRINCIPAL -->
+
+    <div class="structure-main-image">
 
       <img
-        src="images/clinica-ambiente.webp"
-        alt="Ambiente da clínica"
+        src="images/clinica-ambiente-real.webp"
+        alt="Ambiente real da clínica Naélen Almeida"
         loading="lazy"
       >
 
     </div>
 
 
-    <div class="clinic-content">
+    <!-- CONTEÚDO -->
 
-      <span class="section-eyebrow">
-        Nossa estrutura
-      </span>
+    <div class="structure-content">
 
 
-      <h2>
-        Um ambiente criado
-        para você se sentir bem
-      </h2>
+      <div class="structure-content-copy">
 
 
-      <p>
-        Um espaço preparado para proporcionar
-        uma experiência acolhedora, confortável
-        e segura.
-      </p>
+        <span class="eyebrow">
+          Nossa estrutura
+        </span>
 
 
-      <a
-        href="#localizacao"
-        class="btn btn-primary"
-      >
-        Conheça nossa clínica
-      </a>
+        <h2>
+          Uma experiência completa
+          para o seu bem-estar
+        </h2>
 
-    </div>
 
-  </div>
+        <p>
+          Um ambiente moderno, acolhedor e pensado em cada detalhe
+          para proporcionar uma experiência segura, confortável
+          e personalizada.
+        </p>
 
-</section>
+
+      </div>
 
 
 
-<!-- =====================================================
-TECNOLOGIA
-===================================================== -->
+      <!-- MINI GALERIA -->
 
-<section class="technology section">
-
-  <div class="container technology-grid">
+      <div class="structure-mini-gallery">
 
 
-    <div class="technology-content">
+        <!-- SALA -->
 
-      <span class="section-eyebrow">
-        Tecnologia e segurança
-      </span>
+        <article class="structure-mini-card">
 
+          <div class="structure-mini-image">
 
-      <h2>
-        Equipamentos modernos
-        para um atendimento completo
-      </h2>
+            <img
+              src="images/estrutura-sala-atendimento.png"
+              alt="Sala de atendimento da clínica"
+              loading="lazy"
+            >
 
-
-      <p>
-        Tecnologia integrada ao planejamento
-        de cada tratamento para proporcionar
-        mais precisão, conforto e segurança.
-      </p>
-
-
-      <div class="technology-list">
-
-
-        <div class="technology-item">
-
-          <span>
-            ◇
-          </span>
-
-          <div>
-            <strong>
-              Segurança
-            </strong>
-
-            <small>
-              Cuidado em cada etapa
-            </small>
           </div>
 
-        </div>
 
+          <div class="structure-mini-label">
 
-        <div class="technology-item">
+            <span>
+              ♢
+            </span>
 
-          <span>
-            ✦
-          </span>
+            <p>
+              Ambiente acolhedor
+              e privativo
+            </p>
 
-          <div>
-            <strong>
-              Tecnologia
-            </strong>
-
-            <small>
-              Equipamentos modernos
-            </small>
           </div>
 
-        </div>
+        </article>
 
 
-        <div class="technology-item">
 
-          <span>
-            ♡
-          </span>
+        <!-- EQUIPAMENTOS -->
 
-          <div>
-            <strong>
-              Personalização
-            </strong>
+        <article class="structure-mini-card">
 
-            <small>
-              Tratamento individual
-            </small>
+          <div class="structure-mini-image">
+
+            <img
+              src="images/clinica-equipamentos.webp"
+              alt="Equipamentos utilizados na clínica"
+              loading="lazy"
+            >
+
           </div>
 
-        </div>
+
+          <div class="structure-mini-label">
+
+            <span>
+              ✦
+            </span>
+
+            <p>
+              Equipamentos de
+              última geração
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- DETALHES -->
+
+        <article class="structure-mini-card">
+
+          <div class="structure-mini-image">
+
+            <img
+              src="images/detalhe-skincare-clinica.webp"
+              alt="Detalhes de cuidado da clínica"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="structure-mini-label">
+
+            <span>
+              ♡
+            </span>
+
+            <p>
+              Conforto em
+              todos os detalhes
+            </p>
+
+          </div>
+
+        </article>
+
 
       </div>
 
     </div>
 
-
-    <div class="technology-image">
-
-      <img
-        src="images/clinica-equipamentos.webp"
-        alt="Equipamentos da clínica"
-        loading="lazy"
-      >
-
-    </div>
-
   </div>
 
 </section>
 
 
 
-<!-- =====================================================
-LOCALIZAÇÃO
-===================================================== -->
+<!-- ========================================================
+     LOCALIZAÇÃO
+     NOVA ESTRUTURA
+======================================================== -->
 
 <section
-  class="location section"
+  class="location-section"
   id="localizacao"
 >
 
-  <div class="container">
+  <div class="container location-layout">
 
 
-    <div class="section-heading section-heading-center">
+    <!-- ==================================================
+         TEXTO DA ESQUERDA
+    =================================================== -->
 
-      <span class="section-eyebrow">
+    <div class="location-copy">
+
+
+      <span class="eyebrow">
         Onde estamos
       </span>
 
 
       <h2>
-        Venha conhecer a clínica
+        Visite a nossa clínica
       </h2>
 
 
       <p>
-        R. Santarém, 156 — Blumenau, Santa Catarina
+        Estamos em um espaço de fácil acesso,
+        preparado para te receber com todo o cuidado
+        e conforto que você merece.
       </p>
+
+
+      <div class="location-details">
+
+
+        <div class="location-detail">
+
+          <span class="location-detail-icon">
+            ◇
+          </span>
+
+          <div>
+
+            <small>
+              Endereço
+            </small>
+
+            <strong>
+              R. Santarém, 156
+            </strong>
+
+            <span>
+              Blumenau — SC
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="location-detail">
+
+          <span class="location-detail-icon">
+            ✦
+          </span>
+
+          <div>
+
+            <small>
+              Atendimento
+            </small>
+
+            <strong>
+              Espaço acolhedor
+            </strong>
+
+            <span>
+              Ambiente preparado para você
+            </span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <a
+        href="#"
+        class="button button-gold location-whatsapp js-whatsapp"
+      >
+
+        <span class="button-icon">
+          ◉
+        </span>
+
+        Falar pelo WhatsApp
+
+      </a>
+
 
     </div>
 
 
-    <div class="location-grid">
 
+    <!-- ==================================================
+         MAPA + FACHADA
+    =================================================== -->
+
+    <div class="location-media">
+
+
+      <!-- MAPA -->
 
       <div class="location-map">
 
         <iframe
-          src="https://www.google.com/maps?q=R.%20Santar%C3%A9m%20156%20Blumenau%20Santa%20Catarina&output=embed"
+          src="https://www.google.com/maps?q=R.%20Santar%C3%A9m%2C%20156%20Blumenau%20SC&output=embed"
+          title="Mapa da localização da clínica Naélen Almeida"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          title="Localização da clínica Naélen Almeida"
         ></iframe>
 
       </div>
 
 
-      <div class="location-photo">
+
+      <!-- FACHADA -->
+
+      <div class="location-building">
 
         <img
           src="images/fachada-clinica-naelen.webp"
-          alt="Fachada da clínica Naélen Almeida"
+          alt="Fachada onde está localizada a clínica Naélen Almeida"
           loading="lazy"
         >
 
 
-        <div class="location-photo-info">
+        <div class="location-address-card">
 
           <span>
             Nossa localização
           </span>
 
+
           <strong>
             R. Santarém, 156
           </strong>
+
 
           <small>
             Blumenau — SC
@@ -1015,6 +1074,7 @@ LOCALIZAÇÃO
 
       </div>
 
+
     </div>
 
   </div>
@@ -1023,32 +1083,37 @@ LOCALIZAÇÃO
 
 
 
-<!-- =====================================================
-CTA FINAL
-===================================================== -->
+<!-- ========================================================
+     CTA FINAL
+======================================================== -->
 
 <section
-  class="final-cta section"
+  class="final-cta"
   id="contato"
 >
 
-  <div class="container final-cta-grid">
+  <div class="final-cta-grid">
 
+
+    <!-- FOTO -->
 
     <div class="final-cta-image">
 
       <img
-        src="images/tratamento-corporal-naelen.webp"
-        alt="Atendimento corporal realizado na clínica"
+        src="images/cta-naelen-almeida.png"
+        alt="Naélen Almeida em sua clínica"
         loading="lazy"
       >
 
     </div>
 
 
-    <div class="final-cta-content">
+    <!-- TEXTO -->
 
-      <span class="section-eyebrow">
+    <div class="final-cta-copy">
+
+
+      <span class="eyebrow">
         Vamos conversar?
       </span>
 
@@ -1059,29 +1124,35 @@ CTA FINAL
 
 
       <p>
-        Entre em contato para conversar sobre
-        as suas necessidades e descobrir o
-        tratamento mais adequado para você.
+        Será um prazer te receber, entender as suas necessidades
+        e indicar o melhor tratamento para a sua beleza e bem-estar.
       </p>
 
 
-      <div class="final-cta-buttons">
+      <div class="final-cta-actions">
+
 
         <a
           href="#"
-          class="btn btn-primary btn-large"
-          id="whatsapp-button"
+          class="button button-gold js-whatsapp"
         >
+
+          <span class="button-icon">
+            ◉
+          </span>
+
           Falar agora no WhatsApp
+
         </a>
 
 
         <a
           href="#localizacao"
-          class="btn btn-outline btn-large"
+          class="button button-outline"
         >
           Ver localização
         </a>
+
 
       </div>
 
@@ -1096,27 +1167,30 @@ CTA FINAL
 
 
 
-<!-- =====================================================
-FOOTER COMPLETO
-===================================================== -->
+<!-- ========================================================
+     RODAPÉ
+======================================================== -->
 
-<footer class="footer">
-
-  <div class="container footer-top">
+<footer class="site-footer">
 
 
-    <div class="footer-column footer-brand-column">
+  <div class="container footer-content">
+
+
+    <!-- MARCA -->
+
+    <div class="footer-brand-block">
 
       <a
         href="#inicio"
-        class="brand footer-brand"
+        class="footer-brand"
         aria-label="Naélen Almeida"
       >
 
         <img
           src="images/logo-naelen-almeida.png"
           alt="Naélen Almeida Estética Facial e Corporal"
-          class="brand-logo footer-logo"
+          class="footer-logo"
           loading="lazy"
         >
 
@@ -1125,22 +1199,24 @@ FOOTER COMPLETO
 
       <p class="footer-description">
         Estética facial e corporal com atendimento
-        individualizado, tecnologia e cuidado pensado
-        para valorizar a beleza de forma natural.
+        individualizado, tecnologia, segurança e cuidado
+        pensado para valorizar a sua beleza natural.
       </p>
 
     </div>
 
 
 
+    <!-- NAVEGAÇÃO -->
+
     <div class="footer-column">
 
-      <h3 class="footer-title">
+      <h3>
         Navegação
       </h3>
 
 
-      <nav class="footer-nav">
+      <nav class="footer-menu">
 
         <a href="#inicio">
           Início
@@ -1159,11 +1235,7 @@ FOOTER COMPLETO
         </a>
 
         <a href="#estrutura">
-          Estrutura
-        </a>
-
-        <a href="#localizacao">
-          Localização
+          Nossa Estrutura
         </a>
 
       </nav>
@@ -1172,25 +1244,31 @@ FOOTER COMPLETO
 
 
 
+    <!-- CLÍNICA -->
+
     <div class="footer-column">
 
-      <h3 class="footer-title">
-        Atendimento
+      <h3>
+        Clínica
       </h3>
 
 
       <div class="footer-links">
 
-        <a href="#contato">
-          Falar pelo WhatsApp
+        <a href="#estrutura">
+          Conheça o espaço
         </a>
 
         <a href="#tratamentos">
-          Conhecer tratamentos
+          Tratamentos
         </a>
 
         <a href="#resultados">
-          Ver resultados
+          Resultados reais
+        </a>
+
+        <a href="#contato">
+          Agendar avaliação
         </a>
 
       </div>
@@ -1199,9 +1277,11 @@ FOOTER COMPLETO
 
 
 
+    <!-- LOCALIZAÇÃO -->
+
     <div class="footer-column">
 
-      <h3 class="footer-title">
+      <h3>
         Onde estamos
       </h3>
 
@@ -1216,9 +1296,11 @@ FOOTER COMPLETO
           Blumenau — SC
         </p>
 
+
         <a href="#localizacao">
           Ver no mapa →
         </a>
+
 
         <a
           href="https://www.instagram.com/naelen.almeida/"
@@ -1232,9 +1314,12 @@ FOOTER COMPLETO
 
     </div>
 
+
   </div>
 
 
+
+  <!-- PARTE INFERIOR -->
 
   <div class="container footer-bottom">
 
@@ -1243,12 +1328,25 @@ FOOTER COMPLETO
       Naélen Almeida. Todos os direitos reservados.
     </p>
 
+
+    <p>
+      Beleza real. Resultados que valorizam você.
+    </p>
+
   </div>
+
 
 </footer>
 
 
+
+<!-- ========================================================
+     JAVASCRIPT
+======================================================== -->
+
 <script src="js/script.js"></script>
 
+
 </body>
+
 </html>
