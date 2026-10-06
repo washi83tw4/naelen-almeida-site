@@ -1,0 +1,2629 @@
+/* =========================================================
+   NAÉLEN ALMEIDA
+   ESTÉTICA FACIAL E CORPORAL
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+  --bg: #f8f4ed;
+  --bg-soft: #fbf8f3;
+  --white: #ffffff;
+
+  --text: #30221b;
+  --text-soft: #6d625b;
+
+  --gold: #b77a22;
+  --gold-dark: #986116;
+  --gold-light: #d8b16c;
+
+  --brown: #5b331b;
+  --brown-dark: #432617;
+
+  --line: rgba(83, 58, 39, 0.13);
+
+  --shadow-soft:
+    0 15px 50px rgba(57, 39, 25, 0.08);
+
+  --shadow-card:
+    0 10px 30px rgba(57, 39, 25, 0.08);
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+  --radius-pill: 999px;
+
+  --font-title:
+    "Cormorant Garamond",
+    serif;
+
+  --font-body:
+    "Montserrat",
+    sans-serif;
+
+  --container: 1200px;
+
+  --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 82px;
+}
+
+body {
+  font-family: var(--font-body);
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  line-height: 1.6;
+
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+
+  width: 100%;
+}
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.container {
+  width:
+    min(
+      calc(100% - 48px),
+      var(--container)
+    );
+
+  margin-inline: auto;
+}
+
+.section {
+  padding: 95px 0;
+}
+
+.section-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: var(--gold);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.19em;
+
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+}
+
+h2 {
+  font-size:
+    clamp(
+      2.6rem,
+      4.5vw,
+      4.4rem
+    );
+}
+
+p {
+  color: var(--text-soft);
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.btn {
+  min-height: 48px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding:
+    12px
+    24px;
+
+  border-radius:
+    var(--radius-pill);
+
+  font-size: 0.84rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    background var(--transition),
+    color var(--transition);
+}
+
+.btn:hover {
+  transform:
+    translateY(-2px);
+}
+
+.btn-primary {
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold-light),
+      var(--gold),
+      var(--gold-dark)
+    );
+
+  box-shadow:
+    0 10px 28px
+    rgba(154, 99, 25, 0.24);
+}
+
+.btn-primary:hover {
+  box-shadow:
+    0 14px 36px
+    rgba(154, 99, 25, 0.33);
+}
+
+.btn-outline {
+  color: var(--gold-dark);
+
+  background: transparent;
+
+  border:
+    1px solid
+    rgba(154, 99, 25, 0.5);
+}
+
+.btn-outline:hover {
+  background:
+    rgba(183, 122, 34, 0.07);
+}
+
+.btn-large {
+  min-height: 56px;
+
+  padding-inline: 30px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  position: relative;
+
+  z-index: 100;
+
+  background:
+    rgba(255, 255, 255, 0.97);
+
+  border-bottom:
+    1px solid
+    rgba(80, 55, 38, 0.08);
+
+  backdrop-filter:
+    blur(14px);
+}
+
+.header-container {
+  min-height: 82px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 235px;
+  height: 58px;
+
+  object-fit: contain;
+
+  object-position:
+    left center;
+}
+
+
+/* =========================================================
+   MENU DESKTOP
+========================================================= */
+
+.desktop-nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+}
+
+.desktop-nav a {
+  position: relative;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  transition:
+    color var(--transition);
+}
+
+.desktop-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -9px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--gold);
+
+  transition:
+    width var(--transition);
+}
+
+.desktop-nav a:hover {
+  color: var(--gold-dark);
+}
+
+.desktop-nav a:hover::after {
+  width: 100%;
+}
+
+.btn-header {
+  min-height: 44px;
+
+  padding-inline: 20px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c8933a,
+      #9f6718
+    );
+
+  font-size: 0.75rem;
+}
+
+.mobile-menu-button,
+.mobile-nav {
+  display: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 720px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #e8dfd4;
+}
+
+.hero-background {
+  position: absolute;
+
+  inset: 0;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  /*
+     CORRIGIDO:
+     mostra mais a parte de cima da imagem,
+     evitando cortar a testa.
+  */
+
+  object-position:
+    72% 10%;
+}
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+
+      rgba(248, 244, 237, 0.98)
+      0%,
+
+      rgba(248, 244, 237, 0.93)
+      26%,
+
+      rgba(248, 244, 237, 0.68)
+      41%,
+
+      rgba(248, 244, 237, 0.12)
+      58%,
+
+      transparent
+      73%
+    );
+}
+
+.hero-container {
+  position: relative;
+
+  z-index: 2;
+
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+.hero-content {
+  width:
+    min(
+      580px,
+      47%
+    );
+}
+
+.hero-content h1 {
+  max-width: 590px;
+
+  margin-bottom: 24px;
+
+  color: #34231b;
+
+  font-size:
+    clamp(
+      4rem,
+      6vw,
+      6.6rem
+    );
+
+  letter-spacing:
+    -0.04em;
+}
+
+.hero-content h1 span {
+  color: var(--gold);
+
+  font-style: italic;
+}
+
+.hero-content > p {
+  max-width: 535px;
+
+  margin-bottom: 30px;
+
+  font-size: 1rem;
+}
+
+.hero-benefits {
+  display: flex;
+
+  gap: 28px;
+
+  margin-top: 34px;
+}
+
+.benefit-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.benefit-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  color: var(--gold);
+
+  border:
+    1px solid
+    rgba(183, 122, 34, 0.38);
+
+  border-radius: 50%;
+}
+
+.benefit-item span {
+  display: flex;
+
+  flex-direction: column;
+
+  color: var(--text-soft);
+
+  font-size: 0.66rem;
+
+  line-height: 1.35;
+}
+
+.benefit-item strong {
+  color: var(--text);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ATALHOS
+========================================================= */
+
+.treatment-shortcuts {
+  position: relative;
+
+  z-index: 8;
+
+  margin-top: -50px;
+}
+
+.treatment-shortcuts-grid {
+  min-height: 125px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 55px
+    rgba(53, 38, 26, 0.12);
+}
+
+.shortcut-item {
+  position: relative;
+
+  min-height: 125px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    20px
+    14px;
+
+  text-align: center;
+
+  transition:
+    background var(--transition);
+}
+
+.shortcut-item:hover {
+  background: #fbf6ef;
+}
+
+.shortcut-item:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 25%;
+
+  width: 1px;
+  height: 50%;
+
+  background: var(--line);
+}
+
+.shortcut-icon {
+  margin-bottom: 7px;
+
+  color: var(--gold);
+
+  font-size: 1.85rem;
+}
+
+.shortcut-item >
+span:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  font-size: 0.7rem;
+}
+
+.shortcut-item strong {
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SOBRE
+========================================================= */
+
+.about {
+  padding-top: 125px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f4ecdf,
+      #fbf8f3,
+      #fff
+    );
+}
+
+.about-grid {
+  min-height: 600px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.95fr
+    1.05fr;
+
+  border-radius:
+    var(--radius-lg);
+
+  overflow: hidden;
+
+  box-shadow:
+    var(--shadow-soft);
+}
+
+.about-image {
+  min-height: 600px;
+
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+.about-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    60px
+    65px;
+
+  background:
+    rgba(255,255,255,0.8);
+}
+
+.about-content h2 {
+  margin-bottom: 24px;
+}
+
+.about-content h2 span {
+  display: block;
+}
+
+.about-content > p {
+  margin-bottom: 14px;
+
+  font-size: 0.9rem;
+}
+
+.about-highlights {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+.highlight-card {
+  min-height: 120px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+
+  text-align: center;
+
+  background: #f8f3ec;
+
+  border:
+    1px solid
+    rgba(155, 107, 42, 0.07);
+
+  border-radius: 14px;
+}
+
+.highlight-icon {
+  margin-bottom: 8px;
+
+  color: var(--gold);
+
+  font-size: 1.6rem;
+}
+
+.highlight-card strong {
+  font-size: 0.67rem;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   CABEÇALHOS DE SEÇÃO
+========================================================= */
+
+.section-heading {
+  margin-bottom: 48px;
+}
+
+.section-heading-center {
+  max-width: 780px;
+
+  margin-inline: auto;
+
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+
+.section-heading-center h2 {
+  margin-bottom: 14px;
+}
+
+.section-heading-center p {
+  max-width: 590px;
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   TRATAMENTOS
+========================================================= */
+
+.treatments {
+  background: #faf7f2;
+}
+
+.treatments-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+.treatment-card {
+  overflow: hidden;
+
+  background: #fff;
+
+  border:
+    1px solid
+    rgba(67, 45, 31, 0.07);
+
+  border-radius:
+    var(--radius-md);
+
+  box-shadow:
+    var(--shadow-card);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.treatment-card:hover {
+  transform:
+    translateY(-7px);
+
+  box-shadow:
+    0 20px 45px
+    rgba(52, 35, 24, 0.12);
+}
+
+.treatment-image {
+  height: 270px;
+
+  overflow: hidden;
+}
+
+.treatment-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.treatment-card:hover
+.treatment-image img {
+  transform:
+    scale(1.045);
+}
+
+.treatment-content {
+  padding:
+    25px
+    23px
+    27px;
+}
+
+.treatment-content h3 {
+  margin-bottom: 10px;
+
+  font-family:
+    var(--font-body);
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+}
+
+.treatment-content p {
+  min-height: 70px;
+
+  margin-bottom: 17px;
+
+  font-size: 0.76rem;
+
+  line-height: 1.55;
+}
+
+.treatment-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--gold-dark);
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+}
+
+.treatment-link span {
+  width: 26px;
+  height: 26px;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    1px solid
+    rgba(183, 122, 34, 0.4);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   PROCEDIMENTO
+========================================================= */
+
+.procedure-feature {
+  background: #fff;
+}
+
+.procedure-feature-grid {
+  min-height: 530px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.75fr
+    1.25fr;
+
+  overflow: hidden;
+
+  background: #f7f1e8;
+
+  border-radius:
+    var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-soft);
+}
+
+.procedure-feature-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 60px;
+}
+
+.procedure-feature-content h2 {
+  margin-bottom: 20px;
+}
+
+.procedure-feature-content p {
+  max-width: 460px;
+
+  font-size: 0.9rem;
+}
+
+.procedure-feature-image {
+  min-height: 530px;
+
+  overflow: hidden;
+}
+
+.procedure-feature-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* =========================================================
+   RESULTADOS
+========================================================= */
+
+.results {
+  background:
+    linear-gradient(
+      135deg,
+      #f5eee4,
+      #fff
+    );
+}
+
+.results-layout {
+  display: grid;
+
+  grid-template-columns:
+    0.8fr
+    1.8fr;
+
+  gap: 55px;
+
+  align-items: center;
+}
+
+.results-intro h2 {
+  margin-bottom: 20px;
+}
+
+.results-intro p {
+  margin-bottom: 27px;
+
+  font-size: 0.88rem;
+}
+
+.results-gallery {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+.result-card {
+  overflow: hidden;
+
+  background: #fff;
+
+  border-radius:
+    var(--radius-md);
+
+  box-shadow:
+    var(--shadow-card);
+}
+
+.result-image {
+  aspect-ratio:
+    1.25 / 1;
+
+  overflow: hidden;
+}
+
+.result-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.result-info {
+  padding:
+    18px
+    20px
+    21px;
+
+  text-align: center;
+}
+
+.result-info h3 {
+  margin-bottom: 5px;
+
+  font-family:
+    var(--font-body);
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+}
+
+.result-info p {
+  font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   CLÍNICA
+========================================================= */
+
+.clinic {
+  background: #4c2e1d;
+}
+
+.clinic-grid {
+  min-height: 590px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.2fr
+    0.8fr;
+}
+
+.clinic-image {
+  overflow: hidden;
+}
+
+.clinic-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.clinic-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 70px;
+
+  color: #fff;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(192, 132, 58, 0.24),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      135deg,
+      #68401f,
+      #442716
+    );
+}
+
+.clinic-content
+.section-eyebrow {
+  color: #e2bb77;
+}
+
+.clinic-content h2 {
+  margin-bottom: 22px;
+
+  color: #fff;
+}
+
+.clinic-content p {
+  margin-bottom: 20px;
+
+  color:
+    rgba(255,255,255,0.76);
+
+  font-size: 0.88rem;
+}
+
+.clinic-content .btn {
+  align-self: flex-start;
+}
+
+
+/* =========================================================
+   TECNOLOGIA
+========================================================= */
+
+.technology {
+  background: #f8f4ed;
+}
+
+.technology-grid {
+  min-height: 610px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  border-radius:
+    var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-soft);
+}
+
+.technology-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    65px
+    70px;
+}
+
+.technology-content h2 {
+  margin-bottom: 20px;
+}
+
+.technology-content > p {
+  margin-bottom: 28px;
+
+  font-size: 0.88rem;
+}
+
+.technology-list {
+  display: flex;
+
+  gap: 25px;
+}
+
+.technology-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.technology-item > span {
+  color: var(--gold);
+
+  font-size: 1.6rem;
+}
+
+.technology-item div {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.technology-item strong {
+  font-size: 0.66rem;
+}
+
+.technology-item small {
+  color: var(--text-soft);
+
+  font-size: 0.56rem;
+}
+
+.technology-image {
+  overflow: hidden;
+}
+
+.technology-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   LOCALIZAÇÃO
+========================================================= */
+
+.location {
+  background:
+    linear-gradient(
+      180deg,
+      #fbf8f3,
+      #f3e9dc
+    );
+}
+
+.location-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 22px;
+}
+
+.location-map,
+.location-photo {
+  position: relative;
+
+  min-height: 520px;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  border-radius:
+    var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-card);
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+
+  min-height: 520px;
+
+  display: block;
+
+  border: 0;
+}
+
+.location-photo img {
+  width: 100%;
+  height: 520px;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+.location-photo-info {
+  position: absolute;
+
+  left: 22px;
+  bottom: 22px;
+
+  min-width: 220px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding:
+    18px
+    22px;
+
+  color: #fff;
+
+  background:
+    rgba(55,35,21,0.9);
+
+  border-radius: 15px;
+
+  backdrop-filter:
+    blur(8px);
+}
+
+.location-photo-info span {
+  margin-bottom: 4px;
+
+  color: #dfbb7a;
+
+  font-size: 0.6rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+.location-photo-info strong {
+  font-family:
+    var(--font-title);
+
+  font-size: 1.7rem;
+
+  font-weight: 500;
+}
+
+.location-photo-info small {
+  color:
+    rgba(255,255,255,0.75);
+
+  font-size: 0.65rem;
+}
+
+
+/* =========================================================
+   CTA FINAL
+========================================================= */
+
+.final-cta {
+  background:
+    linear-gradient(
+      180deg,
+      #f8f4ed,
+      #eee4d7
+    );
+}
+
+.final-cta-grid {
+  min-height: 520px;
+
+  display: grid;
+
+  grid-template-columns:
+    0.85fr
+    1.15fr;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  border-radius:
+    var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-soft);
+}
+
+.final-cta-image {
+  overflow: hidden;
+}
+
+.final-cta-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+.final-cta-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    60px
+    70px;
+}
+
+.final-cta-content h2 {
+  margin-bottom: 18px;
+}
+
+.final-cta-content > p {
+  max-width: 600px;
+
+  margin-bottom: 28px;
+
+  font-size: 0.88rem;
+}
+
+.final-cta-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   FOOTER COMPLETO
+========================================================= */
+
+.footer {
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fbf7f1
+    );
+
+  border-top:
+    1px solid
+    rgba(80, 55, 38, 0.08);
+}
+
+.footer-top {
+  display: grid;
+
+  grid-template-columns:
+    1.35fr
+    0.75fr
+    0.9fr
+    1fr;
+
+  gap: 45px;
+
+  padding:
+    65px
+    0
+    48px;
+}
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.footer-brand-column {
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 260px;
+  height: auto;
+
+  object-fit: contain;
+
+  object-position:
+    left center;
+}
+
+.footer-description {
+  max-width: 330px;
+
+  color: var(--text-soft);
+
+  font-size: 0.8rem;
+
+  line-height: 1.8;
+}
+
+.footer-title {
+  position: relative;
+
+  margin-bottom: 22px;
+
+  padding-bottom: 11px;
+
+  color: var(--text);
+
+  font-family:
+    var(--font-title);
+
+  font-size: 1.55rem;
+
+  font-weight: 600;
+}
+
+.footer-title::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 34px;
+  height: 1px;
+
+  background: var(--gold);
+}
+
+.footer-nav,
+.footer-links,
+.footer-contact {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+.footer-nav a,
+.footer-links a,
+.footer-contact a {
+  color: var(--text-soft);
+
+  font-size: 0.76rem;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.footer-nav a:hover,
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--gold-dark);
+
+  transform:
+    translateX(3px);
+}
+
+.footer-contact p {
+  color: var(--text-soft);
+
+  font-size: 0.76rem;
+
+  line-height: 1.55;
+}
+
+.footer-bottom {
+  padding:
+    20px
+    0
+    25px;
+
+  border-top:
+    1px solid
+    rgba(80,55,38,0.08);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #8b7d73;
+
+  font-size: 0.64rem;
+}
+
+
+/* =========================================================
+   NOTEBOOK
+========================================================= */
+
+@media (max-width: 1180px) {
+
+  .desktop-nav {
+    gap: 16px;
+  }
+
+  .desktop-nav a {
+    font-size: 0.67rem;
+  }
+
+  .brand-logo {
+    width: 205px;
+  }
+
+  .btn-header {
+    padding-inline: 16px;
+  }
+
+  .hero {
+    min-height: 660px;
+  }
+
+  .hero-content h1 {
+    font-size: 5rem;
+  }
+
+  .about-content,
+  .technology-content,
+  .final-cta-content {
+    padding-inline: 45px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 980px) {
+
+  .desktop-nav,
+  .btn-header {
+    display: none;
+  }
+
+
+  /* MENU MOBILE */
+
+  .mobile-menu-button {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    background: transparent;
+
+    cursor: pointer;
+  }
+
+  .mobile-menu-button span {
+    width: 22px;
+    height: 2px;
+
+    background: var(--text);
+
+    transition:
+      var(--transition);
+  }
+
+  .mobile-menu-button.active
+  span:nth-child(1) {
+    transform:
+      translateY(7px)
+      rotate(45deg);
+  }
+
+  .mobile-menu-button.active
+  span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-button.active
+  span:nth-child(3) {
+    transform:
+      translateY(-7px)
+      rotate(-45deg);
+  }
+
+  .mobile-nav {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    max-height: 0;
+
+    padding-inline: 24px;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    background: #fff;
+
+    box-shadow:
+      0 15px 30px
+      rgba(45,30,20,0.1);
+
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease,
+      padding 0.3s ease;
+  }
+
+  .mobile-nav.active {
+    max-height: 550px;
+
+    padding-top: 18px;
+    padding-bottom: 24px;
+
+    opacity: 1;
+  }
+
+  .mobile-nav >
+  a:not(.btn) {
+    padding:
+      11px
+      0;
+
+    border-bottom:
+      1px solid
+      rgba(50,35,25,0.07);
+
+    font-size: 0.82rem;
+  }
+
+  .mobile-nav .btn {
+    margin-top: 16px;
+  }
+
+
+  /* HERO */
+
+  .hero-content {
+    width: 58%;
+  }
+
+  .hero-content h1 {
+    font-size: 4.5rem;
+  }
+
+
+  /* SOBRE */
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    height: 520px;
+
+    min-height: auto;
+  }
+
+
+  /* TRATAMENTOS */
+
+  .treatments-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  /* PROCEDIMENTO */
+
+  .procedure-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .procedure-feature-image {
+    height: 520px;
+
+    min-height: auto;
+  }
+
+
+  /* RESULTADOS */
+
+  .results-layout {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+
+  /* CLÍNICA */
+
+  .clinic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clinic-image {
+    height: 520px;
+  }
+
+
+  /* TECNOLOGIA */
+
+  .technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-image {
+    height: 500px;
+  }
+
+
+  /* LOCALIZAÇÃO */
+
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* CTA */
+
+  .final-cta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-cta-image {
+    height: 520px;
+  }
+
+
+  /* FOOTER */
+
+  .footer-top {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap:
+      38px
+      45px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  html {
+    scroll-padding-top: 68px;
+  }
+
+  .container {
+    width:
+      min(
+        calc(100% - 30px),
+        var(--container)
+      );
+  }
+
+  .section {
+    padding:
+      65px
+      0;
+  }
+
+  h2 {
+    font-size: 2.7rem;
+  }
+
+
+  /* HEADER */
+
+  .header {
+    position: sticky;
+
+    top: 0;
+  }
+
+  .header-container {
+    min-height: 68px;
+  }
+
+  .brand-logo {
+    width: 170px;
+    height: 44px;
+  }
+
+
+  /* =====================================================
+     HERO MOBILE
+  ===================================================== */
+
+  .hero {
+    min-height: auto;
+
+    display: block;
+
+    background: #f8f2e9;
+  }
+
+  .hero-background {
+    position: relative;
+
+    height: 470px;
+
+    background: #e8dfd4;
+  }
+
+  .hero-background img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+       Mostra mais a parte de cima.
+       Evita cortar testa/cabelo.
+    */
+
+    object-position:
+      74% 8%;
+  }
+
+  .hero-overlay {
+    display: none;
+  }
+
+  .hero-container {
+    padding-top: 32px;
+    padding-bottom: 36px;
+
+    background:
+      linear-gradient(
+        180deg,
+        #fbf7f1,
+        #f7efe4
+      );
+  }
+
+  .hero-content {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    max-width: 370px;
+
+    margin-inline: auto;
+
+    margin-bottom: 17px;
+
+    font-size: 3.55rem;
+
+    line-height: 0.94;
+  }
+
+  .hero-content > p {
+    max-width: 390px;
+
+    margin-inline: auto;
+
+    margin-bottom: 23px;
+
+    font-size: 0.82rem;
+  }
+
+  .hero-content
+  .btn-large {
+    width: 100%;
+  }
+
+  .hero-benefits {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 7px;
+
+    margin-top: 28px;
+  }
+
+  .benefit-item {
+    flex-direction: column;
+
+    gap: 6px;
+
+    text-align: center;
+  }
+
+  .benefit-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .benefit-item span {
+    font-size: 0.52rem;
+  }
+
+
+  /* ATALHOS */
+
+  .treatment-shortcuts {
+    margin-top: 0;
+
+    padding:
+      0
+      15px
+      45px;
+
+    background: #f7efe4;
+  }
+
+  .treatment-shortcuts
+  .container {
+    width: 100%;
+  }
+
+  .treatment-shortcuts-grid {
+    grid-template-columns: 1fr;
+
+    min-height: 0;
+
+    gap: 9px;
+
+    background: transparent;
+
+    box-shadow: none;
+  }
+
+  .shortcut-item {
+    min-height: 70px;
+
+    flex-direction: row;
+
+    justify-content: flex-start;
+
+    gap: 15px;
+
+    padding:
+      10px
+      18px;
+
+    background: #fff;
+
+    border:
+      1px solid
+      rgba(80,55,38,0.07);
+
+    border-radius: 14px;
+
+    text-align: left;
+
+    box-shadow:
+      0 7px 22px
+      rgba(61,40,25,0.05);
+  }
+
+  .shortcut-item::after {
+    display: none;
+  }
+
+  .shortcut-icon {
+    width: 42px;
+
+    margin: 0;
+  }
+
+
+  /* SOBRE */
+
+  .about {
+    padding-top: 65px;
+  }
+
+  .about-grid {
+    width: 100%;
+
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+  .about-image {
+    height: 470px;
+
+    min-height: 0;
+  }
+
+  .about-content {
+    padding:
+      42px
+      20px
+      55px;
+  }
+
+  .about-content h2 {
+    font-size: 3rem;
+  }
+
+  .about-content > p {
+    font-size: 0.82rem;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .highlight-card {
+    min-height: 85px;
+
+    flex-direction: row;
+
+    justify-content: flex-start;
+
+    gap: 16px;
+
+    padding-inline: 18px;
+
+    text-align: left;
+  }
+
+  .highlight-icon {
+    margin-bottom: 0;
+  }
+
+
+  /* TÍTULOS */
+
+  .section-heading-center {
+    margin-bottom: 30px;
+  }
+
+  .section-heading-center h2 {
+    font-size: 2.9rem;
+  }
+
+  .section-heading-center p {
+    font-size: 0.8rem;
+  }
+
+
+  /* TRATAMENTOS */
+
+  .treatments-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .treatment-card {
+    display: grid;
+
+    grid-template-columns:
+      110px
+      1fr;
+
+    min-height: 120px;
+
+    border-radius: 14px;
+  }
+
+  .treatment-image {
+    height: 100%;
+
+    min-height: 120px;
+  }
+
+  .treatment-content {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding:
+      15px
+      45px
+      15px
+      16px;
+  }
+
+  .treatment-content h3 {
+    margin-bottom: 4px;
+
+    font-size: 0.8rem;
+  }
+
+  .treatment-content p {
+    min-height: auto;
+
+    margin: 0;
+
+    font-size: 0.64rem;
+
+    line-height: 1.4;
+  }
+
+  .treatment-link {
+    position: absolute;
+
+    right: 12px;
+    top: 50%;
+
+    transform:
+      translateY(-50%);
+
+    font-size: 0;
+  }
+
+  .treatment-link span {
+    width: 28px;
+    height: 28px;
+  }
+
+
+  /* PROCEDIMENTO */
+
+  .procedure-feature {
+    padding-inline: 15px;
+  }
+
+  .procedure-feature
+  .container {
+    width: 100%;
+  }
+
+  .procedure-feature-grid {
+    border-radius: 20px;
+  }
+
+  .procedure-feature-content {
+    padding:
+      42px
+      20px;
+  }
+
+  .procedure-feature-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .procedure-feature-content p {
+    font-size: 0.8rem;
+  }
+
+  .procedure-feature-image {
+    height: 420px;
+
+    min-height: 0;
+  }
+
+
+  /* RESULTADOS */
+
+  .results-layout {
+    gap: 28px;
+  }
+
+  .results-intro {
+    text-align: center;
+  }
+
+  .results-intro h2 {
+    max-width: 350px;
+
+    margin-inline: auto;
+
+    font-size: 3rem;
+  }
+
+  .results-intro p {
+    font-size: 0.8rem;
+  }
+
+  .results-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .result-image {
+    aspect-ratio:
+      1.5 / 1;
+  }
+
+
+  /* CLÍNICA */
+
+  .clinic-image {
+    height: 430px;
+  }
+
+  .clinic-content {
+    padding:
+      48px
+      20px
+      55px;
+
+    text-align: center;
+  }
+
+  .clinic-content h2 {
+    font-size: 3rem;
+  }
+
+  .clinic-content p {
+    font-size: 0.8rem;
+  }
+
+  .clinic-content .btn {
+    width: 100%;
+
+    align-self: stretch;
+  }
+
+
+  /* TECNOLOGIA */
+
+  .technology {
+    padding-inline: 15px;
+  }
+
+  .technology
+  .container {
+    width: 100%;
+  }
+
+  .technology-grid {
+    border-radius: 20px;
+  }
+
+  .technology-content {
+    padding:
+      45px
+      20px;
+  }
+
+  .technology-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .technology-content > p {
+    font-size: 0.8rem;
+  }
+
+  .technology-list {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .technology-item {
+    padding: 12px;
+
+    background: var(--bg-soft);
+
+    border-radius: 12px;
+  }
+
+  .technology-image {
+    height: 380px;
+  }
+
+
+  /* LOCALIZAÇÃO */
+
+  .location-grid {
+    gap: 14px;
+  }
+
+  .location-map,
+  .location-photo {
+    min-height: 390px;
+
+    border-radius: 18px;
+  }
+
+  .location-map iframe {
+    min-height: 390px;
+  }
+
+  .location-photo img {
+    height: 390px;
+  }
+
+  .location-photo-info {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+
+    min-width: 0;
+  }
+
+
+  /* CTA */
+
+  .final-cta {
+    padding-inline: 15px;
+  }
+
+  .final-cta
+  .container {
+    width: 100%;
+  }
+
+  .final-cta-grid {
+    min-height: 0;
+
+    border-radius: 20px;
+  }
+
+  .final-cta-image {
+    height: 430px;
+  }
+
+  .final-cta-content {
+    padding:
+      45px
+      20px;
+
+    text-align: center;
+  }
+
+  .final-cta-content h2 {
+    font-size: 3rem;
+  }
+
+  .final-cta-content > p {
+    font-size: 0.8rem;
+  }
+
+  .final-cta-buttons {
+    flex-direction: column;
+  }
+
+  .final-cta-buttons
+  .btn {
+    width: 100%;
+  }
+
+
+  /* =====================================================
+     FOOTER MOBILE
+  ===================================================== */
+
+  .footer-top {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    padding:
+      48px
+      0
+      35px;
+  }
+
+  .footer-column {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 235px;
+
+    object-position: center;
+  }
+
+  .footer-description {
+    max-width: 390px;
+  }
+
+  .footer-title {
+    margin-bottom: 16px;
+  }
+
+  .footer-title::after {
+    left: 50%;
+
+    transform:
+      translateX(-50%);
+  }
+
+  .footer-nav,
+  .footer-links,
+  .footer-contact {
+    align-items: center;
+  }
+
+  .footer-nav a:hover,
+  .footer-links a:hover,
+  .footer-contact a:hover {
+    transform: none;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE PEQUENO
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .brand-logo {
+    width: 155px;
+  }
+
+
+  /* Banner mais alto e sem cortar a cabeça */
+
+  .hero-background {
+    height: 430px;
+  }
+
+  .hero-background img {
+    object-position:
+      73% 7%;
+  }
+
+
+  .hero-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .about-image {
+    height: 420px;
+  }
+
+  .treatment-card {
+    grid-template-columns:
+      100px
+      1fr;
+  }
+
+  .procedure-feature-image {
+    height: 390px;
+  }
+
+  .clinic-image {
+    height: 390px;
+  }
+
+  .technology-image {
+    height: 340px;
+  }
+
+  .location-map,
+  .location-photo {
+    min-height: 350px;
+  }
+
+  .location-map iframe {
+    min-height: 350px;
+  }
+
+  .location-photo img {
+    height: 350px;
+  }
+
+  .final-cta-image {
+    height: 390px;
+  }
+
+  .footer-logo {
+    width: 215px;
+  }
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior:
+      auto !important;
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+  }
+
+}
